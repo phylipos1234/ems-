@@ -30,12 +30,14 @@ app.use(helmet({
 }));
 app.use(cors({
   origin: process.env.FRONTEND_URL 
-    ? process.env.FRONTEND_URL.split(',') 
+    ? (process.env.FRONTEND_URL.includes(',') 
+        ? process.env.FRONTEND_URL.split(',').map(url => url.trim())
+        : [process.env.FRONTEND_URL])
     : [
         'http://localhost:5173', 
         'http://localhost:3000', 
         'http://localhost:5174',
-        'https://ems-kappa-ten.vercel.app' // Production URL
+        'https://ems-kappa-ten.vercel.app'
       ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],

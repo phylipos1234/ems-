@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import PrivateRoute from "../routes/PrivateRoute";
 
 // Pages
@@ -28,6 +28,9 @@ import SalaryDetail from "../components/salary/SalaryDetail";
 const AppRoutes = () => {
   return (
     <Routes>
+      {/* Root route redirects to login */}
+      <Route path="/" element={<Navigate to="/login" replace />} />
+      
       {/* Public Route */}
       <Route path="/login" element={<Login />} />
 
