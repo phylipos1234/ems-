@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
-import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setUser } from "../store/userSlice";
 import { useNavigate } from "react-router-dom";
@@ -16,8 +15,8 @@ function Login() {
 
   const loginMutation = useMutation({
     mutationFn: async (data) => {
-      // Login request
-      const res = await axios.post("http://localhost:5000/api/auth/login", data);
+      // Login request - use axiosInstance to respect environment variables
+      const res = await axiosInstance.post("/auth/login", data);
       return res.data;
     },
     onSuccess: async (data) => {

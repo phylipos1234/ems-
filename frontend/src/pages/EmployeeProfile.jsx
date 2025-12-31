@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../api/axiosInstance';
 import { toast } from 'react-toastify';
 import { clearUser } from '../store/userSlice';
+import { getImageUrl } from '../utils/config';
 import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCalendarAlt, FaVenusMars, FaIdCard, FaCamera, FaLock } from 'react-icons/fa';
 
 const EmployeeProfile = () => {
@@ -293,7 +294,7 @@ const EmployeeProfile = () => {
                       />
                     ) : employee?.profileImage ? (
                       <img
-                        src={`http://localhost:5000${employee.profileImage}?v=${imageVersion}`}
+                        src={`${getImageUrl(employee.profileImage)}?v=${imageVersion}`}
                         alt={employee.name}
                         className="w-full h-full object-cover"
                         key={`${employee.profileImage}-${imageVersion}`}
@@ -470,7 +471,7 @@ const EmployeeProfile = () => {
               {employee?.profileImage && (
                 <div className="flex justify-center">
                   <img
-                    src={`http://localhost:5000${employee.profileImage}?v=${imageVersion}`}
+                    src={`${getImageUrl(employee.profileImage)}?v=${imageVersion}`}
                     alt={employee.name}
                     className="w-32 h-32 rounded-full object-cover border-4 border-teal-600"
                     key={`${employee.profileImage}-${imageVersion}`}

@@ -27,9 +27,10 @@ git push -u origin main
 2. Click "Add New Project"
 3. Import your GitHub repository
 4. Configure:
-   - **Build Command**: `cd frontend && npm run build`
-   - **Output Directory**: `frontend/dist`
-   - **Install Command**: `cd frontend && npm install && cd ../server && npm install`
+   - **Framework Preset**: Select **"Other"** ⚠️ (Important for monorepo!)
+   - **Build Command**: `cd frontend && npm run build` (or leave empty - vercel.json handles it)
+   - **Output Directory**: `frontend/dist` (or leave empty - vercel.json handles it)
+   - **Install Command**: `cd frontend && npm install && cd ../server && npm install` (or leave empty - vercel.json handles it)
 5. Add Environment Variables:
    ```
    MONGO_URI=your_connection_string
@@ -39,14 +40,17 @@ git push -u origin main
 6. Click "Deploy"
 
 ### 4. Update URLs (After First Deploy)
-1. Copy your Vercel URL (e.g., `https://ems-abc123.vercel.app`)
-2. Go to Settings → Environment Variables
-3. Add/Update:
+**Your Deployment URL**: `https://ems-585itrx2l-phylipos-projects.vercel.app`
+
+1. Go to Settings → Environment Variables
+2. Add/Update:
    ```
-   FRONTEND_URL=https://your-actual-url.vercel.app
-   VITE_API_URL=https://your-actual-url.vercel.app/api
+   FRONTEND_URL=https://ems-585itrx2l-phylipos-projects.vercel.app
+   VITE_API_URL=https://ems-585itrx2l-phylipos-projects.vercel.app/api
    ```
-4. Redeploy
+3. Redeploy
+
+**See [VERCEL_ENV_VARIABLES.md](./VERCEL_ENV_VARIABLES.md) for complete environment variables setup.**
 
 ## 📚 Detailed Guides
 

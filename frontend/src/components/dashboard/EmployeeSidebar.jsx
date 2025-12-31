@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { FaTachometerAlt, FaUser, FaDollarSign, FaCog, FaTimes, FaCamera } from "react-icons/fa";
 import axiosInstance from "../../api/axiosInstance";
 import { toast } from "react-toastify";
+import { getImageUrl } from "../../utils/config";
 
 const EmployeeSidebar = ({ isOpen, setIsOpen }) => {
   const userInfo = useSelector((state) => state.user.userInfo);
@@ -115,7 +116,7 @@ const EmployeeSidebar = ({ isOpen, setIsOpen }) => {
   };
 
   const profileImageUrl = employee?.profileImage 
-    ? `http://localhost:5000${employee.profileImage}?v=${imageVersion}`
+    ? `${getImageUrl(employee.profileImage)}?v=${imageVersion}`
     : null;
 
   return (

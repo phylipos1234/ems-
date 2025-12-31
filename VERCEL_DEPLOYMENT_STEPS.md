@@ -71,7 +71,8 @@ mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/ems?retryWrites=true&
 1. **Project Name**: Keep default or change to `ems` (optional)
 
 2. **Framework Preset**: 
-   - Select **"Other"** or **"Vite"**
+   - Select **"Other"** (required for monorepo with custom vercel.json)
+   - ⚠️ Do NOT select "Vite" - it will conflict with your monorepo setup
 
 3. **Root Directory**: 
    - Leave as **`./`** (root directory)

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axiosInstance from '../../api/axiosInstance'
+import { getImageUrl } from '../../utils/config'
 
 const EmployeeList = () => {
   const navigate = useNavigate()
@@ -140,7 +141,7 @@ const EmployeeList = () => {
               <tbody className="bg-white divide-y divide-gray-200">
                 {filteredEmployees.map((employee) => {
                   const imageUrl = employee.profileImage 
-                    ? `http://localhost:5000${employee.profileImage}`
+                    ? getImageUrl(employee.profileImage)
                     : null;
                   const hasImageError = imageErrors.has(employee._id);
                   const showImage = imageUrl && !hasImageError;
