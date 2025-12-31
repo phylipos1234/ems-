@@ -2,7 +2,7 @@
 
 ## ✅ Your Application is Live!
 
-**Production URL**: https://ems-585itrx2l-phylipos-projects.vercel.app
+**Production URL**: https://ems-kappa-ten.vercel.app
 
 ---
 
@@ -22,8 +22,8 @@ Add these 5 environment variables (see [VERCEL_ENV_VARIABLES.md](./VERCEL_ENV_VA
 1. **MONGO_URI** - Your MongoDB connection string
 2. **JWT_SECRET** - A random secret key for JWT tokens
 3. **NODE_ENV** - Set to `production`
-4. **FRONTEND_URL** - `https://ems-585itrx2l-phylipos-projects.vercel.app`
-5. **VITE_API_URL** - `https://ems-585itrx2l-phylipos-projects.vercel.app/api`
+4. **FRONTEND_URL** - `https://ems-kappa-ten.vercel.app`
+5. **VITE_API_URL** - `https://ems-kappa-ten.vercel.app/api`
 
 ### Step 3: Redeploy
 1. After adding all variables, go to **Deployments** tab
@@ -37,7 +37,7 @@ Add these 5 environment variables (see [VERCEL_ENV_VARIABLES.md](./VERCEL_ENV_VA
 
 - [ ] Environment variables added in Vercel
 - [ ] Application redeployed
-- [ ] Can access: https://ems-585itrx2l-phylipos-projects.vercel.app
+- [ ] Can access: https://ems-kappa-ten.vercel.app
 - [ ] Login page loads
 - [ ] Can login successfully
 - [ ] API endpoints work
@@ -46,8 +46,8 @@ Add these 5 environment variables (see [VERCEL_ENV_VARIABLES.md](./VERCEL_ENV_VA
 
 ## 🔗 Important Links
 
-- **Your App**: https://ems-585itrx2l-phylipos-projects.vercel.app
-- **API Root**: https://ems-585itrx2l-phylipos-projects.vercel.app/api
+- **Your App**: https://ems-kappa-ten.vercel.app
+- **API Root**: https://ems-kappa-ten.vercel.app/api
 - **Vercel Dashboard**: [vercel.com/dashboard](https://vercel.com/dashboard)
 
 ---

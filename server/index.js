@@ -35,7 +35,7 @@ app.use(cors({
         'http://localhost:5173', 
         'http://localhost:3000', 
         'http://localhost:5174',
-        'https://ems-585itrx2l-phylipos-projects.vercel.app' // Production URL
+        'https://ems-kappa-ten.vercel.app' // Production URL
       ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
